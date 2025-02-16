@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clock App</title>
+        <link rel="stylesheet" href="style.css"> <!-- Main clock styles -->
+        <link rel="stylesheet" href="dropdownstyle.css"> <!-- Dropdown styles -->
+    </head>
+    <script src="dropbox-features/js/dropdown.js"></script>
+<body>
+    <div class="clock-container" onclick="toggleFunctions()">
+        <div class="days">
+            <div id="sunday" class="day">Sunday</div>
+            <div id="monday" class="day">Monday</div>
+            <div id="tuesday" class="day">Tuesday</div>
+            <div id="wednesday" class="day">Wednesday</div>
+            <div id="thursday" class="day">Thursday</div>
+            <div id="friday" class="day">Friday</div>
+            <div id="saturday" class="day">Saturday</div>
+        </div>
+        <div class="time-date">
+            <div id="date-time"></div>  
+        </div>
+
+    <!-- Load external feature scripts -->
+    <script src="extra-features/alarm.js"></script>
+    <script src="extra-features/timezone.js"></script>
+    <script src="extra-features/background.js"></script>
+    <script src="extra-features/datetime.js"></script>
+    <script src="extra-features/animation.js"></script>
+    <script src="dropbox-features/js/dropdown.js"></script>
+    <script src="dropbox-features/js/dropdown.js"></script>
+
+    <!-- Main clock script -->
+    <script src="app.js"></script>
+</body>
+</html>

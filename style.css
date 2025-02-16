@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.clock-container {
+    position: relative; /* Required for dropdown positioning */
+    cursor: pointer; /* Show a pointer cursor to indicate interactivity */
+    padding: 20px; /* Optional: Adds padding to make the area larger */
+}
+
+
+.clock-container {
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Glow around the box */
+    width: 60%;
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for glow */
+}
+
+.time-date {
+    cursor: pointer;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 0 0 8px white, 0 0 15px white;
+}
+
+/* Dropdown menu styling */
+#dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Positioned directly below the clock */
+    left: 0;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 1; /* Make sure the dropdown is on top */
+    pointer-events: none; /* Disable interaction until dropdown is visible */
+    opacity: 0; /* Start with the dropdown hidden */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Dropdown menu items */
+.dropdown-item {
+    color: white;
+    padding: 8px 0;
+    border-bottom: 1px solid #555;
+    text-align: center;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+/* Hover effect for menu items */
+.dropdown-item:hover {
+    background-color: #444;
+}
+
+/* Dropdown menu hidden by default */
+#dropdown-menu {
+    display: none; /* Hidden initially */
+    position: absolute;
+    top: 100%; /* Positioned below the clock */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px; /* Adjust width as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Start as invisible */
+}
+
+/* Dropdown menu is visible */
+#dropdown-menu.visible {
+    display: block; /* Make it visible */
+    opacity: 1; /* Fade it in */
+}
+/* Prevent text selection on the entire clock container */
+.clock-container {
+    user-select: none;
+}
+
+.clock-container:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1); /* Stronger glow when hovered */
+}
+
+.days {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.day {
+    font-size: 18px;
+    margin-bottom: 5px;
+    opacity: 0.6;
+    color: #ccc;
+    transition: opacity 0.3s, color 0.3s;
+}
+
+.day.active {
+    opacity: 1;
+    color: white;
+    text-shadow: 0 0 8px white, 0 0 15px white;
+}
+
+.time-date {
+    flex-grow: 1;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #ddd;
+}
+
+#date-time {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 8px white, 0 0 15px white;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#date-time.midnight {
+    animation: fadeInOut 1s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+.am-pm {
+    text-shadow: 0 0 8px white, 0 0 15px white;
+}
+
+.time-change-animation {
+    animation: timeChangeEffect 1s ease-in-out;
+}
+
+@keyframes timeChangeEffect {
+    0% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+}
+/* Default background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 1s ease-in-out;  /* Smooth transition */
+}
+
+/* Sunrise (Morning) - Dark blue gradient with green grass */
+body.sunrise {
+    background: linear-gradient(to bottom, #001f3d, #002a59, #1d3b2a); /* Dark blue to dark green */
+}
+
+/* Afternoon - Lighter sky with some green */
+body.afternoon {
+    background: linear-gradient(to bottom, #00b4d8, #1ab47f); /* Light blue to green */
+}
+
+/* Evening - Orange to yellow sunset with dark green */
+body.evening {
+    background: linear-gradient(to bottom, #ff9e2a, #ffdb6b, #2d4b2d); /* Sunset colors */
+}
+
+/* Moonlit (Night) - Black to dark blue gradient with dark green for grass */
+body.moonlit {
+    background: linear-gradient(to bottom, #000000, #002a59, #1d3b2a); /* Dark blue to green */
+}
