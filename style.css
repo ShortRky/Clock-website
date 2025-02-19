@@ -32,58 +32,6 @@ body {
     text-shadow: 0 0 8px white, 0 0 15px white;
 }
 
-/* Dropdown menu styling */
-#dropdown-menu {
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 100%; /* Positioned directly below the clock */
-    left: 0;
-    background-color: #222;
-    padding: 10px;
-    border-radius: 10px;
-    width: 100%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    z-index: 1; /* Make sure the dropdown is on top */
-    pointer-events: none; /* Disable interaction until dropdown is visible */
-    opacity: 0; /* Start with the dropdown hidden */
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Dropdown menu items */
-.dropdown-item {
-    color: white;
-    padding: 8px 0;
-    border-bottom: 1px solid #555;
-    text-align: center;
-    cursor: pointer;
-    user-select: none; /* Prevent text selection */
-}
-
-/* Hover effect for menu items */
-.dropdown-item:hover {
-    background-color: #444;
-}
-
-/* Dropdown menu hidden by default */
-#dropdown-menu {
-    display: none; /* Hidden initially */
-    position: absolute;
-    top: 100%; /* Positioned below the clock */
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 200px; /* Adjust width as needed */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.3s ease;
-    opacity: 0; /* Start as invisible */
-}
-
-/* Dropdown menu is visible */
-#dropdown-menu.visible {
-    display: block; /* Make it visible */
-    opacity: 1; /* Fade it in */
-}
 /* Prevent text selection on the entire clock container */
 .clock-container {
     user-select: none;

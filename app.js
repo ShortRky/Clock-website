@@ -83,11 +83,6 @@ window.onload = function() {
     setInterval(updateBackground, 60000);  // Update every minute
 };
 
-function toggleDropdown() {
-    const dropdownMenu = document.getElementById('dropdown-menu');
-    // Toggle dropdown visibility by toggling the 'dropdown-show' class
-    dropdownMenu.classList.toggle('dropdown-show');
-}
 // In app.js or your main JavaScript file
 
 document.addEventListener('DOMContentLoaded', () => {
